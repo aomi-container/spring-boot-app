@@ -11,6 +11,7 @@ ENV LANG=C.UTF-8
 
 ENV APP_HOME=/application
 ENV LOG_PATH=$APP_HOME/logs
+ENV LOG_FOLDER=$APP_HOME/logs
 ENV PATH=$PATH:$APP_HOME/bin
 
 ADD start.sh /start.sh
