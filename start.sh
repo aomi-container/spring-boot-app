@@ -10,7 +10,7 @@ export LOG_FILE=$LOG_PATH/$APP_NAME.log
 
 if [ 0"$DEFAULT_RUN_ARGS" = "0" ];
 then
-export DEFAULT_RUN_ARGS="--logging.file=$LOG_FILE --server.port=1818"
+export DEFAULT_RUN_ARGS="--logging.file=$LOG_FILE --server.port=80"
 fi
 
 
