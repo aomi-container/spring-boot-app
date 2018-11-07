@@ -20,6 +20,6 @@ RUN chmod +x /start.sh
 WORKDIR $APP_HOME
 
 VOLUME $APP_HOME
-EXPOSE 1818
+EXPOSE 80
 
 CMD ["/start.sh"]
