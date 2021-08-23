@@ -21,10 +21,10 @@ RUN apt-get update && apt-get -y install tzdata curl; \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone; \
     chmod +x /start.sh; \
-    useradd -u 10007 -d ${APP_HOME} -ms /bin/bash app && chown -R 10007:10007 ${APP_HOME}
+    groupadd -g 999 app; \
+    useradd -u 999 -g 999 -d ${APP_HOME} -ms /bin/bash app && chown -R 999:999 ${APP_HOME}
 
 WORKDIR $APP_HOME
-USER app
 VOLUME $APP_HOME
 EXPOSE 80
 
